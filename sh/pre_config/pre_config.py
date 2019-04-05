@@ -51,16 +51,3 @@ if __name__ == "__main__":
     spark_default_config_file = open("{output_dir}/spark-defaults.conf".format(output_dir=output_dir), 'w')
     spark_default_config_file.write(get_spark_default_config_file_content(data, execution_id))
     spark_default_config_file.close()
-
-
-
-
-
-
-
-
-
-
-
-
-
