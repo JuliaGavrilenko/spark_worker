@@ -6,7 +6,7 @@ docker_hub_tag : ""
 site_level_config_version: 1.0
 default_var_prefix: spark_worker_default_var
 runtime_vars:
-  - worker_runtime_var_host
+  - spark_worker_runtime_var_spark_master
 host_requirements:
     firewall:
     - ports: 8081
@@ -14,7 +14,7 @@ host_requirements:
       action: accept
       ipv6: true
 docker_run_parameters:
-  hostname: *worker_runtime_var_host
+  hostname: *spark_worker_runtime_var_spark_master
   privileged: true
   detached: true
   tty: true

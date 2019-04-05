@@ -12,4 +12,4 @@ mkdir -p $SPARK_WORKER_LOG
 echo "Starting spark worker"
 trap '' HUP
 /spark/bin/spark-class org.apache.spark.deploy.worker.Worker \
-    --webui-port $SPARK_WORKER_WEBUI_PORT $SPARK_MASTER >> $SPARK_WORKER_LOG/spark-worker.out 2>&1 </dev/null &
+    --webui-port $SPARK_WORKER_WEBUI_PORT $SPARK_WORKER >> $SPARK_WORKER_LOG/spark-worker.out 2>&1 </dev/null &
